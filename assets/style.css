@@ -1,0 +1,329 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    grid-area: cabeza;
+    background-color: rgb(10, 64, 116);
+    
+}
+nav {
+    grid-area: barra;
+    background-color: rgb(211, 199, 199);
+}
+main {
+    grid-area: centro;
+    background-color: white;
+    overflow: scroll;
+}
+footer {
+    grid-area: pie;
+    background-color: rgb(10, 64, 116);
+}
+
+
+/* PC */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    'cabeza barra barra'
+    'cabeza centro centro'
+    'cabeza centro centro'
+    'pie centro centro'
+    ;  
+    grid-template-columns: 1fr 7fr 1fr  ;
+    height: 100vh;
+    grid-template-rows: 10% 20% 60% 10%;
+    
+    
+}
+
+
+.f-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    }
+    .f-head i{
+        padding: 20px;
+    }
+    .f-head p{
+        font-size: larger;
+        padding: 5px;
+        
+    }
+
+
+
+.btn {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        color: gray;
+        padding: 10px 20px;
+        width: 80%;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top:5px;
+        
+    }
+nav{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+
+    .card-list{
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: column ;
+        margin: 20px;
+        align-items: center;
+        border: 1px solid rgb(211, 199, 199);
+       
+        
+
+    }
+    
+    .card img{
+        padding: 10px;
+        width: 80%;
+        height: 350px;
+        margin-bottom: 10px;
+        
+    }
+
+    .card button{
+        background-color: rgb(10, 64, 116);
+        color: white;
+        margin: 5px;
+        width: 20%;
+        height: 30px;
+        border-radius: 10px;
+        
+    }
+
+    .pagination  {
+        margin-top: 15px;
+    }
+
+    .pagination a {
+        color: rgb(10, 64, 116);
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: 1px solid #ddd;
+        align-content: center;
+    }
+.flexp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   color: white;  
+   
+}
+
+footer i {
+  margin-bottom: 5px;
+}
+
+footer p {
+    font-size: larger;
+    text-align: center;
+  }
+
+
+
+
+/* Media Q*/
+
+@media screen and (max-width: 576px) {
+    .grid {
+        display: grid;
+        grid-template-areas: 
+        'cabeza cabeza cabeza'
+        'barra barra barra'
+        'centro centro centro'
+        'pie pie pie'
+        ;  
+        grid-template-columns: 1fr 7fr 1fr;
+        height: 100vh;
+        grid-template-rows: 10% 10% 70% 10%;
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .f-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        color: white;
+    }
+    .f-head i{
+        padding: 15px;
+        
+        
+    }
+    .f-head p{
+        font-size: larger;
+        
+    }
+   
+    .menu {
+        display: none;
+        list-style: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        color: gray;
+        padding: 10px 20px;
+        width: 80%;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top:5px;
+        
+    }
+    
+   
+}
+
+@media screen and (max-width: 576px) {
+    nav{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+
+    .card-list{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+        border: 1px solid rgb(211, 199, 199);
+       
+        
+
+    }
+    
+    .card img{
+        padding: 10px;
+        width: 80%;
+        height: 350px;
+        margin-bottom: 10px;
+        
+    }
+
+    .card button{
+        background-color: rgb(10, 64, 116);
+        color: white;
+        margin: 5px;
+        width: 20%;
+        height: 30px;
+        border-radius: 10px;
+        
+    }
+    
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .pagination  {
+        margin-top: 15px;
+    }
+
+    .pagination a {
+        color: rgb(10, 64, 116);
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: 1px solid #ddd;
+        
+    }
+
+    .flexp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 576px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       color: white;  
+       padding: 30px;
+    }
+
+    footer i {
+      margin-bottom: 5px;
+    }
+
+    footer p {
+        font-size: larger;
+      }
+}
+
+
+
+
+.menu li {
+
+    list-style: none;
+    margin: 10px;
+}
+
